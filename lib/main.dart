@@ -1,7 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/pages/homepage.dart';
+import 'package:weather_app/states/weather_cubit.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    BlocProvider(
+      create: (context) => WeatherCubit(),
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -13,53 +21,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.red,
       ),
-      home: const MyHomePage(title: 'Flutter WeatherMap API'),
+      home: const HomePage(title: 'Flutter WeatherMap API'),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(widget.title),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text('Please enter city name: '),
-            SizedBox(
-              height: 20,
-            ),
-            Padding(padding: EdgeInsets.all(15)),
-            TextField(
-              decoration: InputDecoration(
-                hintText: 'City',
-                border: OutlineInputBorder(),
-              ),
-            ),
-            ElevatedButton(
-              child: Text('Seatch'),
-              onPressed: () {},
-            )
-          ],
-        ),
-      ),
     );
   }
 }
