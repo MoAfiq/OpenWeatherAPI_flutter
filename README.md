@@ -15,3 +15,6 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 # OpenWeatherAPI_flutter
+
+A project from Mobile Development module - Besquare 2022
+With addition of helps from Youtube Tutorial from Epic Programmer channel
