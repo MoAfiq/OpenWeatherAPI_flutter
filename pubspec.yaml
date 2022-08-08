@@ -36,6 +36,8 @@ dependencies:
   cupertino_icons: ^1.0.2
   http: ^0.13.5
   flutter_bloc: ^8.0.1
+  hexcolor: ^2.0.7
+  flutter_svg: ^1.1.3
 
 dev_dependencies:
   flutter_test:
@@ -60,9 +62,14 @@ flutter:
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+assets:
+ - images/a_dot_burr.jpeg
+ - images/a_dot_ham.jpeg
+ - lib/assets/images/svg/icons/droplet.svg
+ - lib/assets/images/svg/icons/temp.svg
+ - lib/assets/images/svg/icons/uvi.svg
+ - lib/assets/images/svg/icons/wind.svg
+ - droplet.svg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
@@ -75,17 +82,30 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
-  #
+fonts:
+ - family: Roboto
+   fonts:
+     - asset: assets/fonts/RobotoMono-Bold.ttf
+     - asset: assets/fonts/RobotoMono-BoldItalic.ttf
+     - asset: assets/fonts/RobotoMono-ExtraLight.ttf
+     - asset: assets/fonts/RobotoMono-ExtraLightItalic.ttf
+     - asset: assets/fonts/RobotoMono-Italic.ttf
+     - asset: assets/fonts/RobotoMono-Light.ttf
+     - asset: assets/fonts/RobotoMono-LightItalic.ttf
+     - asset: assets/fonts/RobotoMono-Medium.ttf
+     - asset: assets/fonts/RobotoMono-MediumItalic.ttf
+     - asset: assets/fonts/RobotoMono-Regular.ttf
+     - asset: assets/fonts/RobotoMono-SemiBold.ttf
+     - asset: assets/fonts/RobotoMono-SemiBoldItalic.ttf
+     - asset: assets/fonts/RobotoMono-Thin.ttf
+     - asset: assets/fonts/RobotoMono-ThinItalic.ttf
+
+       style: italic
+ - family: Trajan Pro
+   fonts:
+     - asset: fonts/TrajanPro.ttf
+     - asset: fonts/TrajanPro_Bold.ttf
+       weight: 700
+
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
